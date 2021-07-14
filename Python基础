@@ -1,0 +1,39 @@
+# def Return():
+#     """
+#     的函数
+#     """
+#     i=1
+#     while i <=15:
+#         print("呵呵")
+#         i+=1
+#     print("结束了")
+# Return()
+# print("*" * 50)
+# # Return()
+# def sum_sum1() :
+#     """
+#     求两个数的和
+#     :return:
+#     """
+#     num1 = int(input("请输入数字1："))
+#     num2 = int(input("请输入数字2："))
+#     sum = num1 + num2
+#     he = sum
+#     print("两个数的和为：%d"% he)
+# sum_sum1()
+
+
+def sum_sum2(num1,num2) :
+    """
+    求两个数的和
+    :return:
+    """
+    # num1 = int(input("请输入数字1："))
+    # num2 = int(input("请输入数字2："))
+    sum = num1 + num2
+    he = sum
+    print("两个数的和为：%d"% he)
+sum_sum2(20,80)
+a = int(input("输入1："))
+b = int(input("数入2："))
+sum_sum2(a,b)
