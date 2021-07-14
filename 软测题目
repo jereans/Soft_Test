@@ -1,0 +1,37 @@
+M = int(input(""))  # 模块总数
+N = int(input(""))  # 后续N行
+nodes = {}
+appear_points = set()
+
+for i in range(N):
+    a, b = [int(i) for i in input("").split(" ")]
+    if a not in nodes:
+        nodes[a] = [b]
+    else:
+        nodes[a].append(b)
+    appear_points.add(a)
+    appear_points.add(b)
+
+
+# 函数
+def dfs(num, start_num):
+    if num not in nodes:  # num没有下一个node
+        return
+    else:
+        for next_num in nodes[num]:
+            if next_num == start_num:
+                return True
+            result = dfs(next_num, start_num)
+            if result:
+                return True
+
+
+# main
+point = 10
+point -= M - len(appear_points)
+for num in nodes.keys():
+    result = dfs(num, num)
+    if result:
+        point -= 2
+        break
+print(point)
